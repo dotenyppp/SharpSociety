@@ -635,12 +635,13 @@ main{
 .contactos-mapa {
     width: 100%;
     margin-bottom: 0;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
 }
 
 .contactos-mapa iframe {
     display: block;
+    width: 70%;
+    height: 520px;       /* aumenta a altura */
+    margin: 0 auto;     /* centraliza o mapa */
 }
 
 /* Formulário */
