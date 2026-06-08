@@ -1,0 +1,760 @@
+/* __________________________LETRAS_____________________________ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
+/* __________________________HEADER_____________________________ */
+
+header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-bottom: 1px solid #000;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 27px;
+    margin-bottom: 25px;
+}
+
+nav a {
+    position: relative;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    transition: color 0.7s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.7s ease;
+}
+
+nav a:hover::after {
+    width: 0;
+}
+
+/* __________________________DROPDOWN_____________________________ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: color 0.7s ease;
+}
+
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.7s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    width: 0;
+}
+
+/* Ponte invisível */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+/* MENU */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 🔥 ISTO resolve */
+    gap: 10px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+/* LINKS */
+.dropdown-menu a {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    transition: color 0.7s ease;
+}
+
+/* LINHA DO TAMANHO DO TEXTO */
+.dropdown-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.7s ease;
+}
+
+.dropdown-menu a:hover::after {
+    width: 0;
+}
+
+/* __________________________BODY_____________________________ */
+
+body{
+    margin: 0;
+}
+
+/* __________________________MAIN_____________________________ */
+
+main{
+    text-align: center;
+    background-color: white
+}
+
+
+/* __________________________INICIO_____________________________ */
+
+#imagem1_fundo{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.container1{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+#imagem2_sobreposta{
+    position: absolute;
+    filter: brightness(0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 570px;
+    width: 970px;
+    border-radius: 15px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+}
+
+#texto_frente {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+
+/* __________________________LOCAL_____________________________ */
+
+#local{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    padding: 30px;
+    background-color: white
+}
+
+.secao-local {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    padding-top: 10px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    background-color: white
+}
+
+.coluna-esquerda {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-esquerda img {
+    width: 100%;
+    border-radius: 15px;
+    border: 5px solid rgba(0, 0, 0, 0.082);
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+.morada {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.coluna-direita {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    gap: 20px;
+}
+
+.descricao {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.button-mapa {
+    display: block;
+    font-weight: bold;
+    width: 80%;
+    padding: 18px;
+    border: 1.5px solid black;
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-mapa:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+/* __________________________HORARIO_____________________________ */
+
+#horario {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    padding: 60px;
+    background-color: white
+}
+
+.tabela-horario {
+    width: 70%;
+    margin: 0 auto 20px auto;
+    font-family: 'IBM Plex Serif', serif;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.tabela-horario th {
+    background-color: black;
+    color: white;
+    padding: 12px 16px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.tabela-horario td {
+    padding: 16px 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.tabela-horario td.hora {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.tabela-horario tr.almoco td.hora {
+    background-color: black;
+    color: white;
+    font-style: normal;
+}
+
+.tabela-horario tr.almoco td {
+    background-color: #d4d4d4;
+    font-style: italic;
+    color: #000000;
+    font-weight: bold;
+}
+
+.tabela-horario td.fechado {
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.button-agendar {
+    display: block;
+    font-weight: bold;
+    margin: 0 auto 0px auto;
+    width: 20%;
+    padding: 20px;
+    border: 1.5px solid black;
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-agendar:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* __________________________BARBEIROS_____________________________ */
+
+#barbers-title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 40px 0 40px 0;
+    background-color: white;
+}
+
+.barbers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    padding: 20px 0 100px 0;
+    background-color: white;
+}
+
+.barber-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barber-name {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+.barber-card img {
+    width: 350px;
+    height: 480px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+}
+
+.barber-instagram {
+    font-size: 20px;
+    color: black;
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+
+/* __________________________NÓS_____________________________ */
+
+.nos-welcome {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px 80px 80px 80px;
+    background-color: white;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+.nos-welcome-text {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nos-welcome-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 77px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin: 10px 20px 70px 0;
+    color: black;
+    text-align: center;
+}
+
+.nos-welcome-body {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 23px;
+    line-height: 1.9;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.nos-welcome-image {
+    width: 45%;
+    position: relative;
+}
+
+.nos-welcome-image img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 0 30px 0;
+    border-radius: 7px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.4);
+}
+
+.nos-elevate {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nos-elevate-bg {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.45);
+}
+
+.nos-elevate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nos-elevate-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* __________________________CONTACTOS_____________________________ */
+
+.contactos-main {
+    text-align: center;
+    padding: 60px 80px 80px 80px;
+    background-color: white;
+}
+
+.contactos-banner img {
+    width: 100%;        /* estica até às duas pontas */
+    height: 100%;      /* altura da imagem — ajusta à tua vontade */
+    object-fit: cover;  /* corta a imagem para preencher sem deformar */
+    object-position: center; /* centra o foco da imagem */
+}
+
+.contactos-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin: 0 0 20px 0;
+    color: black;
+}
+
+.contactos-morada {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    color: black;
+}
+
+.contactos-telefone-email {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 30px 0;
+}
+
+.contactos-telefone-email a {
+    color: black;
+    text-decoration: none;
+}
+
+.contactos-telefone-email a:hover {
+    text-decoration: underline;
+}
+
+.contactos-horario-bloco {
+    margin: 0 0 35px 0;
+}
+
+.contactos-horario-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 0 0 10px 0;
+    color: black;
+}
+
+.contactos-horario-info {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 4px 0;
+    color: black;
+}
+
+.contactos-btn-agendar {
+    display: inline-block;
+    width: 55%;
+    padding: 18px 30px;
+    border: 1.5px solid black;
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactos-btn-agendar:hover {
+    background-color: black;
+    color: white;
+}
+
+.contactos-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.contactos-instagram:hover {
+    text-decoration: underline;
+}
+
+.contactos-mapa {
+    width: 100%;
+    margin-bottom: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.contactos-mapa iframe {
+    display: block;
+}
+
+/* Formulário */
+.contactos-form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 20px 0;
+}
+
+.contactos-form {
+    width: 380px;
+    text-align: left;
+}
+
+.form-label {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: black;
+}
+
+.form-sublabel {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-required {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: 22px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #555;
+}
+
+.form-input-full {
+    width: 100%;
+}
+
+.form-textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.form-submit-wrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-submit {
+    padding: 12px 50px;
+    border: 1.5px solid black;
+    background-color: white;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* __________________________FOOTER_____________________________ */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+#img_footer{
+    border-radius: 10px;
+    width: 100px;
+}
